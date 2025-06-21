@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Productivity App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main class="container">
+    <header>
+      <h1>Productivity App</h1>
+    </header>
+
+    <!-- Focus Timer -->
+    <section class="timer-section" aria-labelledby="focus-timer-heading">
+      <h2 id="focus-timer-heading">Focus Timer</h2>
+
+      <div id="timer" aria-live="polite" aria-atomic="true">
+        <span id="minutes">0</span>:<span id="seconds">00</span>
+      </div>
+
+      <div class="timer-controls">
+        <div class="timer-input">
+          <label for="minutesInput">Set Minutes:</label>
+          <input
+            type="number"
+            id="minutesInput"
+            min="1"
+            max="60"
+            value="25"
+            aria-label="Set timer minutes"
+          />
+        </div>
+        <button id="startBtn">Start</button>
+        <button id="resetBtn">Reset</button>
+      </div>
+    </section>
+
+    <!-- Task List -->
+    <section class="tasks-section" aria-labelledby="task-list-heading">
+      <h2 id="task-list-heading">Task List</h2>
+      <form id="taskForm">
+        <input
+          type="text"
+          id="taskInput"
+          placeholder="Add a new task"
+          required
+          aria-label="New task input"
+        />
+        <button type="submit">Add Task</button>
+      </form>
+      <ul id="taskList" aria-live="polite">
+        <!-- Tasks will appear here -->
+      </ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
